@@ -1,0 +1,13 @@
+image = new SimpleImage("flowers.jpg");
+print(image);
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  count = pixel.getY();
+  count ++;
+  if (count > image.getHeight()/2) {
+    pixel.setRed(avg);
+    pixel.setGreen(avg);
+    pixel.setBlue(avg);
+  }
+}
+print(image);

@@ -1,0 +1,16 @@
+image = new SimpleImage("flowers.jpg");
+print(image);
+for (pixel : image) {
+    x = pixel.getX();
+    y = pixel.getY();
+    width = image.getWidth();
+    height = image.getHeight();
+    a = width + height;
+    avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+    pixel = image.getPixel(x, y);
+    b = (x + y) / (a - y);
+    pixel.setRed(avg * b);
+    pixel.setGreen(avg * b);
+    pixel.setBlue(avg * b);
+}
+print(image);

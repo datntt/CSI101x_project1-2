@@ -1,0 +1,24 @@
+image = new SimpleImage("flowers.jpg");
+sum_red = 0; sum_green = 0; sum_blue = 0;
+for (pixel: image) {
+  // Your code here
+  sum_red += pixel.getRed();
+  sum_green += pixel.getGreen();
+  sum_blue += pixel.getBlue();
+}
+total = image.getWidth() * image.getHeight(); // tổng số pixel trong hình.
+avg_red = sum_red / total; // màu đỏ tb.
+avg_green = sum_green / total;
+avg_blue = sum_blue / total;
+avg = (avg_red  + avg_green   + avg_blue ) / 3 ;
+print(image);
+print("Average Red: " + avg_red);
+print("Average Green: " + avg_green );
+print("Average Blue: " + avg_blue );
+if ( avg < 100) {
+  print("Too dark");
+} else if (avg > 155) {
+  print("Too light");
+}else{
+  print("Normal");
+}

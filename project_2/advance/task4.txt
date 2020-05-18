@@ -1,0 +1,9 @@
+image = new SimpleImage("images.jfif");
+print(image);
+for (pixel: image) {
+// làm nhiễu ảnh.
+  pixel.setRed(pixel.getRed() / 15);
+  pixel.setGreen(Math.floor(Math.random() * 255));
+  pixel.setBlue(pixel.getBlue() / 20);
+}
+print(image);

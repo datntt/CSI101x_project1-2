@@ -1,0 +1,8 @@
+image = new SimpleImage("flowers.jpg");
+for (pixel: image) {
+  // sử lý trên 1 phần của ảnh.
+  if(pixel.getX() < 100) {
+    pixel.setGreen(0);
+  }
+}
+print(image);

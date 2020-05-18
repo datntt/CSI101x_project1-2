@@ -1,0 +1,21 @@
+image = new SimpleImage("khung.png");
+back = new SimpleImage("body.jpg");
+sign= new SimpleImage("ten.jpg");
+back.setSameSize(image);
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  // your code here
+  if ( pixel.getBlue() > avg * 0.9){
+    pixel2 = back.getPixel(pixel.getX(), pixel.getY());
+    pixel.setRed(pixel2.getRed());
+    pixel.setGreen(pixel2.getGreen());
+    pixel.setBlue(pixel2.getBlue());
+  }
+  if ( pixel.getBlue() > avg * 0.82){
+    pixel3 = sign.getPixel(pixel.getX(), pixel.getY());
+    pixel.setRed(pixel3.getRed());
+    pixel.setGreen(pixel3.getGreen());
+    pixel.setBlue(pixel3.getBlue());
+  }
+}
+print(image);

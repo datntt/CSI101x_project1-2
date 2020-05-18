@@ -1,0 +1,19 @@
+image = new SimpleImage("watermark.jpg");
+print(image);
+back = new SimpleImage("flowers.jpg");
+back.setSameSize(image);
+print(back);
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  if ( pixel.getBlue() > avg * 0.9){
+    pixel2 = back.getPixel(pixel.getX(), pixel.getY());
+    pixel.setRed(pixel2.getRed());
+    pixel.setGreen(pixel2.getGreen());
+    pixel.setBlue(pixel2.getBlue());
+  } else {
+    pixel.setRed((pixel.getRed() + pixel2.getRed()) / 2);
+    pixel.setGreen((pixel.getGreen() + pixel2.getGreen()) / 2);
+    pixel.setBlue((pixel.getBlue() + pixel2.getBlue()) / 2);
+  }
+}
+print(image);

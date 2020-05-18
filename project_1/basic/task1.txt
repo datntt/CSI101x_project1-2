@@ -1,0 +1,9 @@
+image = new SimpleImage("flowers.jpg");
+
+for (pixel: image) {
+	// thay đổi các giá trị các màu theo yêu cầu.
+	pixel.setRed(pixel.getRed() *  0.3);
+	pixel.setGreen(pixel.getGreen() * 0.3);
+	pixel.setBlue(pixel.getBlue() * 0.3);
+}
+print(image); // in ra màn hình.
