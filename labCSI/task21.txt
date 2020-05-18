@@ -1,0 +1,31 @@
+//Exercises 1
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  if (row.getField("name").startsWith("O")) {
+    //print(row);
+    count ++;
+  }
+}
+print("count :", count);
+//Exercises 2
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+// your code here
+  if (row.getField("name").startsWith("T")) {
+    //print(row);
+    count ++;
+  }
+}
+print("count :", count);
+//Exercises 3
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  if (row.getField("name").endsWith("d")) {
+    //print(row);
+    count ++;
+  }
+}
+print("count :", count);

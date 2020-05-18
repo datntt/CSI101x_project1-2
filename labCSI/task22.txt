@@ -1,0 +1,51 @@
+//Exercises 1
+table = new SimpleTable("baby-2010.csv");
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if (row.getField("name").startsWith("A")) {
+    //print(row);
+    count1 ++;
+  }
+  if (row.getField("name").startsWith("B")) {
+    //print(row);
+    count2 ++;
+  }
+}
+print("count A :", count1);
+print("count B :", count2);
+//Exercises 2
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase(); // chuyển về chữ viết thường;
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if (row.getField("color") == "red" ) {
+    //print(row);
+    count1 ++;
+  }
+  if (row.getField("color") == "blue" ) {
+    //print(row);
+    count2 ++;
+  }
+}
+print("count red :", count1);
+print("count blue :", count2);
+//Exercises 3
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase();
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if ( row.getField("soda") == "coke") {
+    if (row.getField("color") == "red" ) {
+      //print(row);
+      count1 ++;
+    }else if (row.getField("color") == "blue" ) {
+      //print(row);
+      count2 ++;
+    }
+  }
+}
+print("count coke_red :", count1);
+print("count coke_blue :", count2);

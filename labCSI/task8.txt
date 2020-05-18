@@ -1,0 +1,21 @@
+//Exercises 1
+image = new SimpleImage("golden-gate-red.jpg");
+
+for (pixel: image) {
+  pixel.setGreen(pixel.getRed());
+  pixel.setBlue(pixel.getRed());
+}
+
+print(image);
+//Exercises 2
+image = new SimpleImage("banana.jpg");
+
+for (pixel: image) {
+avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  // Your code here
+  pixel.setRed(avg);
+  pixel.setGreen(avg);
+  pixel.setBlue(avg);
+}
+
+print(image);

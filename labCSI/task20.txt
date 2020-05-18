@@ -1,0 +1,21 @@
+//Exercises 1
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+if (row.getField("name").startsWith("X") || row.getField("name").startsWith("Y")) {
+print(row);
+}
+}
+//Exercises 2
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if(row.getField("name").startsWith("B") && row.getField("name").endsWith("a")){
+    print(row);
+  }
+}
+//Exercises 3
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField("name").endsWith("i") && row.getField("gender") == "boy") {
+    print(row);
+  }
+}

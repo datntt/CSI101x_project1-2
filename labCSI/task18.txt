@@ -1,0 +1,28 @@
+//Exercises 1
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField("name") == "Atticus") {
+    print(row);
+  }
+}
+//Exercises 2
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField("name") == "River") {
+    print(row);
+  }
+}
+//Exercises 3
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField("rank") < 10 ) {
+    print(row);
+  }
+}
+//Exercises 4
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField("rank") > 950 ) {
+    print(row);
+  }
+}
